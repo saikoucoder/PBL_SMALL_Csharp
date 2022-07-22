@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F027E22-1B90-4EE8-8E16-6F2D5FD7A80C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PBL_SMALL_Csharp</RootNamespace>
+    <AssemblyName>PBL_SMALL_Csharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CUSTOM\AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUSTOM\AlertForm.Designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOM\Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CUSTOM\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnect\BookBLL.cs" />
+    <Compile Include="DatabaseConnect\BookDAL.cs" />
+    <Compile Include="DatabaseConnect\DataConnection.cs" />
+    <Compile Include="DatabaseConnect\IssueBLL.cs" />
+    <Compile Include="DatabaseConnect\IssueDAL.cs" />
+    <Compile Include="DatabaseConnect\MemberBLL.cs" />
+    <Compile Include="DatabaseConnect\MemberDAL.cs" />
+    <Compile Include="DatabaseConnect\UserBLL.cs" />
+    <Compile Include="DatabaseConnect\UserDAL.cs" />
+    <Compile Include="MODEL\Book.cs" />
+    <Compile Include="MODEL\Issue.cs" />
+    <Compile Include="MODEL\Member.cs" />
+    <Compile Include="MODEL\User.cs" />
+    <Compile Include="PRESENTER\Func_Class.cs" />
+    <Compile Include="VIEW\AddBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\AddBookForm.Designer.cs">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\AddMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\AddMemberForm.Designer.cs">
+      <DependentUpon>AddMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\DeleteBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\DeleteBookForm.Designer.cs">
+      <DependentUpon>DeleteBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\DeleteMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\DeleteMemberForm.Designer.cs">
+      <DependentUpon>DeleteMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\EditBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\EditBookForm.Designer.cs">
+      <DependentUpon>EditBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\EditMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\EditMemberForm.Designer.cs">
+      <DependentUpon>EditMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\IssueBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\IssueBookForm.Designer.cs">
+      <DependentUpon>IssueBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\ListBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\ListBookForm.Designer.cs">
+      <DependentUpon>ListBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\ListMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\ListMemberForm.Designer.cs">
+      <DependentUpon>ListMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIEW\UserManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\UserManagerForm.Designer.cs">
+      <DependentUpon>UserManagerForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CUSTOM\AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\AddBookForm.resx">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\AddMemberForm.resx">
+      <DependentUpon>AddMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\DeleteBookForm.resx">
+      <DependentUpon>DeleteBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\DeleteMemberForm.resx">
+      <DependentUpon>DeleteMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\EditBookForm.resx">
+      <DependentUpon>EditBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\EditMemberForm.resx">
+      <DependentUpon>EditMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\IssueBookForm.resx">
+      <DependentUpon>IssueBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\ListBookForm.resx">
+      <DependentUpon>ListBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\ListMemberForm.resx">
+      <DependentUpon>ListMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VIEW\UserManagerForm.resx">
+      <DependentUpon>UserManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_50_1px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luke-chesser-hQo6Uyo4nBg-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue Gradient Grainy Dreams Desktop Wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adrien-ledoux-mBHuEkka5wM-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_man_man_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open Comic Book_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_reading_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_processing20211028-6282-1xgl9nb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generated_photos_5e6889316d3b380006f22d41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in_app_messaging_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_96px.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\_The Reign of Queen Victoria_ book cover _ 99designs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Professional cover for a business book _ Book cover contest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple strong typography book cover _ Book cover contest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bureau for Visual Affairs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheRightMix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_46px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_46px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\素敵な装丁の本76 _ gyu%27s shop blog.jpg" />
+    <None Include="Resources\add_user_group_man_man_48px.png" />
+    <None Include="Resources\name_48px.png" />
+    <None Include="Resources\mail_48px.png" />
+    <None Include="Resources\user_48px.png" />
+    <None Include="Resources\password_48px.png" />
+    <None Include="Resources\kakashi_hatake_96px.png" />
+    <None Include="Resources\registration_48px.png" />
+    <None Include="Resources\delete_user_male_48px.png" />
+    <None Include="Resources\add_book_48px.png" />
+    <None Include="Resources\book_and_pencil_48px.png" />
+    <None Include="Resources\edit_property_48px.png" />
+    <None Include="Resources\remove_book_48px.png" />
+    <None Include="Resources\list_48px.png" />
+    <None Include="Resources\travel_book_48px.png" />
+    <None Include="Resources\issuebook.jpg" />
+    <None Include="Resources\27eabb6631ca3e19efc07543541af122.jpg" />
+    <None Include="Resources\travel_book_48_redpx.png" />
+    <None Include="Resources\more_info_48px.png" />
+    <None Include="Resources\error_cloud.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\Warning_.png" />
+    <Content Include="Book_cover\12 Beautiful Redesigned Covers Of Literary Classics.jpg" />
+    <Content Include="Book_cover\24 Delicious Book Covers of 2020 So Far.jpg" />
+    <Content Include="Book_cover\26 Gorgeous New Covers For Classic Books.jpg" />
+    <Content Include="Book_cover\7 Upcoming YA Releases To Get Excited For _ The Nerd Daily.jpg" />
+    <Content Include="Book_cover\8 New Horror Novels To Give You Goosebumps This Fall.jpg" />
+    <Content Include="Book_cover\Anya and the Nightingale.jpg" />
+    <Content Include="Book_cover\Best Mystery Thriller Book Covers from 2017.jpg" />
+    <Content Include="Book_cover\Blue is a Darkness Weakened by Light ebook by Sarah McCarry - Rakuten Kobo.jpg" />
+    <Content Include="Book_cover\Enemies to lovers books %28part one%29.jpg" />
+    <Content Include="Book_cover\Lit Hub’s Most Anticipated Books of 2019, Part 2.png" />
+    <Content Include="Book_cover\Lore and Lust _ Queer Vampire Romance Series Book One - 9781735589800.jpg" />
+    <Content Include="Book_cover\Tess of the Road - Hardcover.jpg" />
+    <Content Include="Book_cover\The 22 Most Iconic Book Covers Of All Time.jpg" />
+    <Content Include="Book_cover\The Blue Salt Road ebook by Joanne Harris - Rakuten Kobo.jpg" />
+    <Content Include="Book_cover\The Official List of Harper%27s Summer 2019 Young Adult Book Covers.jpg" />
+    <Content Include="Book_cover\The Official List of Harper’s Fall 2019 Young Adult Book Covers.jpg" />
+    <Content Include="Book_cover\The Official List of Harper’s Fall 2020 YA Book Covers.png" />
+    <Content Include="Book_cover\The Official List of Harper’s Summer 2022 YA Cover Reveals.png" />
+    <Content Include="Book_cover\The Official List of Harper’s Winter 2022 YA Cover Reveals.jpg" />
+    <Content Include="Book_cover\The Official List of Harper’s Winter 2022 YA Cover Reveals.png" />
+    <Content Include="Book_cover\These New Minimalist Stephen King Book Covers Will Remind You Why Reading is Scary.png" />
+    <Content Include="Resources\warning_shield_48px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
